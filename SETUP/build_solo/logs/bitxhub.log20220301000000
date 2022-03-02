@@ -1,0 +1,17 @@
+time="2022-03-01T15:50:07.507" level=info msg="Initialize genesis" module=app
+time="2022-03-01T15:50:07.522" level=info msg="MemPool batch size = 200" module=order
+time="2022-03-01T15:50:07.522" level=info msg="MemPool tx slice size = 200" module=order
+time="2022-03-01T15:50:07.522" level=info msg="MemPool batch seqNo = 1" module=order
+time="2022-03-01T15:50:07.522" level=info msg="MemPool pool size = 50000" module=order
+time="2022-03-01T15:50:07.522" level=info msg="SOLO lastExec = 1" module=order
+time="2022-03-01T15:50:07.522" level=info msg="SOLO batch timeout = 300ms" module=order
+time="2022-03-01T15:50:07.522" level=info msg="GRPC service started" module=api port=60011
+time="2022-03-01T15:50:07.522" level=info msg="Ulimit raised" module=app ulimit=2048
+time="2022-03-01T15:50:07.522" level=info msg="BlockExecutor started" hash=0x0BF41c03bE038e389470dBdC9ed53DF897F178921520AF37877188d1759A7068 height=1 module=executor
+time="2022-03-01T15:50:07.522" level=info msg="BlockExecutor started" hash=0x0BF41c03bE038e389470dBdC9ed53DF897F178921520AF37877188d1759A7068 height=1 module=executor
+time="2022-03-01T15:50:07.522" level=info msg="Router module started" module=router
+time="2022-03-01T15:50:07.623" level=info msg="Order is ready" module=app plugin_path=plugins/solo.so
+time="2022-03-01T15:57:54.596" level=info msg="BlockExecutor stopped" module=executor
+time="2022-03-01T15:57:54.596" level=info msg="BlockExecutor stopped" module=executor
+time="2022-03-01T15:57:54.596" level=info msg="Router module stopped" module=router
+time="2022-03-01T15:57:54.596" level=info msg="Bitxhub stopped" module=app

@@ -1,0 +1,35 @@
+time="09:17:55.160" level=info msg="Establish connection with bitxhub localhost:60011 successfully" module=app
+time="09:17:57.281" level=info msg="Pier information" id=0xcC40733440Afae94CebC55A25D498eD32961FC23 interchain_counter="map[]" module=app receipt_counter="map[]" source_receipt_counter="map[]"
+time="09:17:57.400" level=info msg="Monitor started" module=monitor
+time="09:17:57.400" level=info msg="Executor started" module=executor
+time="09:17:57.402" level=info msg="BitXHub lite started" bitxhub_height=6 current_height=10 module=bxh_lite
+time="09:17:57.402" level=info msg="Syncer started" bitxhub_height=6 current_height=10 module=syncer
+time="09:17:57.753" level=info msg="Exchanger started" module=exchanger
+time="09:31:50.952" level=warning msg="Discard wrong wrapper" height=7 module=syncer
+time="09:32:04.985" level=warning msg="Discard wrong wrapper" height=8 module=syncer
+time="09:32:15.120" level=warning msg="Discard wrong wrapper" height=9 module=syncer
+time="09:32:44.946" level=warning msg="Discard wrong wrapper" height=10 module=syncer
+time="09:32:45.245" level=warning msg="Invalid wrapper" error="tx wrapper merkle root is wrong" height=11 module=syncer
+time="09:32:45.245" level=info msg="Persist block header" height=11 module=bxh_lite
+time="09:35:49.681" level=info msg="Persist block header" height=12 module=bxh_lite
+time="09:35:49.681" level=info msg="Get interchain tx wrapper" begin=10 end=12 module=syncer
+time="09:35:49.682" level=info msg="Handle interchain tx wrapper" count=0 height=11 index=0 module=syncer
+time="09:35:49.682" level=info msg="Handle interchain tx wrapper" count=0 height=12 index=0 module=syncer
+time="09:36:06.480" level=warning msg="query header: header at 13 not found" module=syncer
+time="09:36:06.480" level=info msg="Persist block header" height=13 module=bxh_lite
+time="09:36:08.481" level=info msg="Handle interchain tx wrapper" count=1 height=13 index=0 module=syncer
+time="09:36:08.482" level=info msg="Apply tx" from=0xcC40733440Afae94CebC55A25D498eD32961FC23 id=0xcC40733440Afae94CebC55A25D498eD32961FC23-0x2De21c07EE0bCDfCe0598bEB446Cdbf83436AEFe-1 index=1 module=executor status=true type=RECEIPT_FAILURE
+time="09:36:19.789" level=info msg="Execute callback" fields.msg= index=1 module=executor status=true type=RECEIPT_FAILURE
+time="09:36:19.789" level=info msg="Handle ibtp receipt success" id=0xcC40733440Afae94CebC55A25D498eD32961FC23-0x2De21c07EE0bCDfCe0598bEB446Cdbf83436AEFe-1 module=exchanger type=RECEIPT_FAILURE
+time="09:38:52.771" level=info msg="Persist block header" height=14 module=bxh_lite
+time="09:38:52.771" level=warning msg="query header: header at 14 not found" module=syncer
+time="09:38:54.772" level=info msg="Handle interchain tx wrapper" count=0 height=14 index=0 module=syncer
+time="09:39:34.383" level=error msg="receive: rpc error: code = Unavailable desc = transport is closing" module=app
+time="09:39:34.383" level=error msg="receive: rpc error: code = Unavailable desc = transport is closing" module=app
+time="09:39:34.383" level=warning msg="Unexpected closed channel while syncing interchain tx wrapper" module=syncer
+time="09:39:34.383" level=warning msg="Unexpected closed channel while syncing block header" module=bxh_lite
+time="09:39:45.275" level=info msg="Monitor stopped" module=monitor
+time="09:39:45.277" level=info msg="Executor stopped" module=executor
+time="09:39:45.277" level=info msg="BitXHub lite stopped" module=bxh_lite
+time="09:39:45.277" level=info msg="Syncer stopped" module=syncer
+time="09:39:45.277" level=info msg="Exchanger stopped" module=exchanger
