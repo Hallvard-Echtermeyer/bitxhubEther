@@ -36,15 +36,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.6+commit.b259423e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"destChainID\",\"type\":\"address\"},{\"name\":\"destAddr\",\"type\":\"string\"},{\"name\":\"funcs\",\"type\":\"string\"},{\"name\":\"args\",\"type\":\"string\"},{\"name\":\"argsCb\",\"type\":\"string\"},{\"name\":\"argsRb\",\"type\":\"string\"}],\"name\":\"emitInterchainEvent\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/transfere.sol\":\"BrokerTransfer\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/transfere.sol\":{\"keccak256\":\"0xf38233861cf072225f8e2e73ea3a34c1c767d662a11c268bcdf21151d9c0a4fb\",\"urls\":[\"bzzr://ee4e075760a83fec68a6ef697d9abc01ff43e8de578133255c6418d25e3bf53e\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.6+commit.b259423e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"destChainID\",\"type\":\"address\"},{\"name\":\"destAddr\",\"type\":\"string\"},{\"name\":\"funcs\",\"type\":\"string\"},{\"name\":\"args\",\"type\":\"string\"},{\"name\":\"argsCb\",\"type\":\"string\"},{\"name\":\"argsRb\",\"type\":\"string\"}],\"name\":\"emitInterchainEvent\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/transfer.sol\":\"BrokerTransfer\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/transfer.sol\":{\"keccak256\":\"0x1bc28ce51d1769e70985eaa7f5f7dcbf0fb07e933bf74f3dcb48acec43686f08\",\"urls\":[\"bzzr://206360b4582cca1761f957c0fb04b993abf39e113a42adf27c026ca8d085dd9f\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity >=0.5.6;\n\ncontract Transfer {\n    mapping(string => uint64) accountM; // map for accounts\n    // change the address of Broker accordingly\n    address BrokerAddr = 0xdF4F2A42e1d912674963Ff0eEDF8Ac1F30E0d46B;\n    BrokerTransfer broker = BrokerTransfer(BrokerAddr);\n\n    // AccessControl\n    modifier onlyBroker() {\n        require(msg.sender == BrokerAddr, \"Invoker are not the Broker\");\n        _;\n    }\n\n    // contract for asset\n    function transfer(\n        address destChainID,\n        string memory destAddr,\n        string memory sender,\n        string memory receiver,\n        string memory amount\n    ) public {\n        uint64 am = uint64(parseInt(amount));\n        require(accountM[sender] >= am);\n        accountM[sender] -= am;\n\n        // stitch parameters\n        string memory args = concat(toSlice(sender), toSlice(\",\"));\n        args = concat(toSlice(args), toSlice(receiver));\n        args = concat(toSlice(args), toSlice(\",\"));\n        args = concat(toSlice(args), toSlice(amount));\n\n        string memory argsRb = concat(toSlice(sender), toSlice(\",\"));\n        argsRb = concat(toSlice(argsRb), toSlice(amount));\n\n        broker.emitInterchainEvent(\n            destChainID,\n            destAddr,\n            \"interchainCharge,,interchainRollback\",\n            args,\n            \"\",\n            argsRb\n        );\n    }\n\n    function interchainRollback(string memory sender, uint64 val)\n        public\n        onlyBroker\n    {\n        accountM[sender] += val;\n    }\n\n    function interchainCharge(\n        string memory sender,\n        string memory receiver,\n        uint64 val\n    ) public onlyBroker returns (bool) {\n        accountM[receiver] += val;\n        return true;\n    }\n\n    function getBalance(string memory id) public view returns (uint64) {\n        return accountM[id];\n    }\n\n    function setBalance(string memory id, uint64 amount) public {\n        accountM[id] = amount;\n    }\n\n    function parseInt(string memory self) public pure returns (uint256 _ret) {\n        bytes memory _bytesValue = bytes(self);\n        uint256 j = 1;\n        for (\n            uint256 i = _bytesValue.length - 1;\n            i >= 0 && i < _bytesValue.length;\n            i--\n        ) {\n            assert(uint8(_bytesValue[i]) >= 48 && uint8(_bytesValue[i]) <= 57);\n            _ret += (uint8(_bytesValue[i]) - 48) * j;\n            j *= 10;\n        }\n    }\n\n    struct slice {\n        uint256 _len;\n        uint256 _ptr;\n    }\n\n    function toSlice(string memory self) internal pure returns (slice memory) {\n        uint256 ptr;\n        assembly {\n            ptr := add(self, 0x20)\n        }\n        return slice(bytes(self).length, ptr);\n    }\n\n    function concat(slice memory self, slice memory other)\n        internal\n        pure\n        returns (string memory)\n    {\n        string memory ret = new string(self._len + other._len);\n        uint256 retptr;\n        assembly {\n            retptr := add(ret, 32)\n        }\n        memcpy(retptr, self._ptr, self._len);\n        memcpy(retptr + self._len, other._ptr, other._len);\n        return ret;\n    }\n\n    function memcpy(\n        uint256 dest,\n        uint256 src,\n        uint256 len\n    ) private pure {\n        // Copy word-length chunks while possible\n        for (; len >= 32; len -= 32) {\n            assembly {\n                mstore(dest, mload(src))\n            }\n            dest += 32;\n            src += 32;\n        }\n\n        // Copy remaining bytes\n        uint256 mask = 256**(32 - len) - 1;\n        assembly {\n            let srcpart := and(mload(src), not(mask))\n            let destpart := and(mload(dest), mask)\n            mstore(dest, or(destpart, srcpart))\n        }\n    }\n}\n\ncontract BrokerTransfer {\n    //renamed for seperation of build JSON files\n    function emitInterchainEvent(\n        address destChainID,\n        string memory destAddr,\n        string memory funcs,\n        string memory args,\n        string memory argsCb,\n        string memory argsRb\n    ) public;\n}\n",
-  "sourcePath": "/home/hallvard/Masters-Programing/EtherBit/Scripts/Ethereum02/contracts/transfere.sol",
+  "source": "pragma solidity >=0.5.6;\n\ncontract Transfer {\n    mapping(string => uint64) accountM; // map for accounts\n    // change the address of Broker accordingly\n    address BrokerAddr = 0xc4C4cDC0ee90d2E1B1D029ADA1ad6c8510c02397;\n    BrokerTransfer broker = BrokerTransfer(BrokerAddr);\n\n    // AccessControl\n    modifier onlyBroker() {\n        require(msg.sender == BrokerAddr, \"Invoker are not the Broker\");\n        _;\n    }\n\n    // contract for asset\n    function transfer(\n        address destChainID,\n        string memory destAddr,\n        string memory sender,\n        string memory receiver,\n        string memory amount\n    ) public {\n        uint64 am = uint64(parseInt(amount));\n        require(accountM[sender] >= am);\n        accountM[sender] -= am;\n\n        // stitch parameters\n        string memory args = concat(toSlice(sender), toSlice(\",\"));\n        args = concat(toSlice(args), toSlice(receiver));\n        args = concat(toSlice(args), toSlice(\",\"));\n        args = concat(toSlice(args), toSlice(amount));\n\n        string memory argsRb = concat(toSlice(sender), toSlice(\",\"));\n        argsRb = concat(toSlice(argsRb), toSlice(amount));\n\n        broker.emitInterchainEvent(\n            destChainID,\n            destAddr,\n            \"interchainCharge,,interchainRollback\",\n            args,\n            \"\",\n            argsRb\n        );\n    }\n\n    function interchainRollback(string memory sender, uint64 val)\n        public\n        onlyBroker\n    {\n        accountM[sender] += val;\n    }\n\n    function interchainCharge(\n        string memory sender,\n        string memory receiver,\n        uint64 val\n    ) public onlyBroker returns (bool) {\n        accountM[receiver] += val;\n        return true;\n    }\n\n    function getBalance(string memory id) public view returns (uint64) {\n        return accountM[id];\n    }\n\n    function setBalance(string memory id, uint64 amount) public {\n        accountM[id] = amount;\n    }\n\n    function parseInt(string memory self) public pure returns (uint256 _ret) {\n        bytes memory _bytesValue = bytes(self);\n        uint256 j = 1;\n        for (\n            uint256 i = _bytesValue.length - 1;\n            i >= 0 && i < _bytesValue.length;\n            i--\n        ) {\n            assert(uint8(_bytesValue[i]) >= 48 && uint8(_bytesValue[i]) <= 57);\n            _ret += (uint8(_bytesValue[i]) - 48) * j;\n            j *= 10;\n        }\n    }\n\n    struct slice {\n        uint256 _len;\n        uint256 _ptr;\n    }\n\n    function toSlice(string memory self) internal pure returns (slice memory) {\n        uint256 ptr;\n        assembly {\n            ptr := add(self, 0x20)\n        }\n        return slice(bytes(self).length, ptr);\n    }\n\n    function concat(slice memory self, slice memory other)\n        internal\n        pure\n        returns (string memory)\n    {\n        string memory ret = new string(self._len + other._len);\n        uint256 retptr;\n        assembly {\n            retptr := add(ret, 32)\n        }\n        memcpy(retptr, self._ptr, self._len);\n        memcpy(retptr + self._len, other._ptr, other._len);\n        return ret;\n    }\n\n    function memcpy(\n        uint256 dest,\n        uint256 src,\n        uint256 len\n    ) private pure {\n        // Copy word-length chunks while possible\n        for (; len >= 32; len -= 32) {\n            assembly {\n                mstore(dest, mload(src))\n            }\n            dest += 32;\n            src += 32;\n        }\n\n        // Copy remaining bytes\n        uint256 mask = 256**(32 - len) - 1;\n        assembly {\n            let srcpart := and(mload(src), not(mask))\n            let destpart := and(mload(dest), mask)\n            mstore(dest, or(destpart, srcpart))\n        }\n    }\n}\n\ncontract BrokerTransfer {\n    //renamed for seperation of build JSON files\n    function emitInterchainEvent(\n        address destChainID,\n        string memory destAddr,\n        string memory funcs,\n        string memory args,\n        string memory argsCb,\n        string memory argsRb\n    ) public;\n}\n",
+  "sourcePath": "/home/hallvard/Masters-Programing/EtherBit/Scripts/Ethereum02/contracts/transfer.sol",
   "ast": {
-    "absolutePath": "project:/contracts/transfere.sol",
+    "absolutePath": "project:/contracts/transfer.sol",
     "exportedSymbols": {
       "BrokerTransfer": [
         526
@@ -151,7 +151,7 @@
             },
             "value": {
               "argumentTypes": null,
-              "hexValue": "307864463446324134326531643931323637343936334666306545444638416331463330453064343642",
+              "hexValue": "307863344334634443306565393064324531423144303239414441316164366338353130633032333937",
               "id": 130,
               "isConstant": false,
               "isLValue": false,
@@ -165,7 +165,7 @@
                 "typeIdentifier": "t_address_payable",
                 "typeString": "address payable"
               },
-              "value": "0xdF4F2A42e1d912674963Ff0eEDF8Ac1F30E0d46B"
+              "value": "0xc4C4cDC0ee90d2E1B1D029ADA1ad6c8510c02397"
             },
             "visibility": "internal"
           },
@@ -5641,7 +5641,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "project:/contracts/transfere.sol",
+      "absolutePath": "project:/contracts/transfer.sol",
       "exportedSymbols": {
         "BrokerTransfer": [
           526
@@ -5752,7 +5752,7 @@
               {
                 "attributes": {
                   "argumentTypes": null,
-                  "hexvalue": "307864463446324134326531643931323637343936334666306545444638416331463330453064343642",
+                  "hexvalue": "307863344334634443306565393064324531423144303239414441316164366338353130633032333937",
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -5760,7 +5760,7 @@
                   "subdenomination": null,
                   "token": "number",
                   "type": "address payable",
-                  "value": "0xdF4F2A42e1d912674963Ff0eEDF8Ac1F30E0d46B"
+                  "value": "0xc4C4cDC0ee90d2E1B1D029ADA1ad6c8510c02397"
                 },
                 "id": 130,
                 "name": "Literal",
@@ -11642,7 +11642,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.5",
-  "updatedAt": "2022-03-01T21:44:41.139Z",
+  "updatedAt": "2022-03-07T12:05:58.976Z",
   "devdoc": {
     "methods": {}
   },

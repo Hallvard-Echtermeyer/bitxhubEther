@@ -1,0 +1,11 @@
+[ether]
+addr = "wss://rinkeby.infura.io/ws/v3/43b36e4162f04775b91869b9fed5e5c8"
+name = "SmartContractTester"
+contract_address = "0x6Cf9ac536Ab8558E225B7371e7417588f6cc2D2C"
+key_path = "account.key"
+password = "password"
+min_confirm = 1
+
+[contract_abi]
+0x8e8B6a2857CBe4a50d4Ec367c6321b55959A634D="data_swapper.abi"
+0x8EA66b4E3e0bc50fea91400121F3D0c86A63d04A="transfer.abi"

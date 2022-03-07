@@ -1,0 +1,77 @@
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+Migrations dry-run (simulation)
+===============================
+> Network name:    'rinkeby-fork'
+> Network id:      4
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+3_transfer.js
+=============
+
+   Deploying 'Transfer'
+   --------------------
+undefined
+   > block number:        10277951
+   > block timestamp:     1646518178
+   > account:             0xfBe29Cc66a5680Fbc0305f3A11369becc78AC945
+   > balance:             0.736670581171853007
+   > gas used:            1138319 (0x115e8f)
+   > gas price:           2.50000001 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00284579751138319 ETH
+
+   -------------------------------------
+   > Total cost:     0.00284579751138319 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.00284579751138319 ETH
+
+
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+3_transfer.js
+=============
+
+   Deploying 'Transfer'
+   --------------------
+   > transaction hash:    0xb8c7e07ca0a0a5a6305195abcc23820d6c2e1423f1296b831441432ae681ef4b
+undefined
+undefined
+undefined
+   > Blocks: 0            Seconds: 12
+   > contract address:    0xf2A523371c8f68970186aBf06F3Cd2BEADA12987
+   > block number:        10277956
+   > block timestamp:     1646518194
+   > account:             0xfBe29Cc66a5680Fbc0305f3A11369becc78AC945
+   > balance:             0.730911336148816027
+   > gas used:            1138319 (0x115e8f)
+   > gas price:           2.50000001 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00284579751138319 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.00284579751138319 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.00284579751138319 ETH
+
+

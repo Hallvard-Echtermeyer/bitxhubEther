@@ -3,7 +3,7 @@ pragma solidity >=0.5.6;
 contract DataSwapper {
     mapping(string => string) dataM; // map for accounts
     // change the address of Broker accordingly
-    address BrokerAddr = 0xdF4F2A42e1d912674963Ff0eEDF8Ac1F30E0d46B;
+    address BrokerAddr = 0xc4C4cDC0ee90d2E1B1D029ADA1ad6c8510c02397;
     BrokerSwapper broker = BrokerSwapper(BrokerAddr);
 
     // AccessControl
