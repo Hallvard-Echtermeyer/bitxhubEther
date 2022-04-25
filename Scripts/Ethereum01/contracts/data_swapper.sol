@@ -3,9 +3,10 @@ pragma solidity >=0.5.6;
 contract DataSwapper {
     mapping(string => string) dataM; // map for accounts
     // change the address of Broker accordingly
-    address BrokerAddr = 0x2F4bbC4b116C8389165efA2235750Bc62ac33697;
+    address BrokerAddr = 0x74b7bC65bC2A65C564d2CB999917b6B0722F4B16;
     BrokerSwapper broker = BrokerSwapper(BrokerAddr);
 
+    event Logger(string message);
     // AccessControl
     modifier onlyBroker() {
         require(msg.sender == BrokerAddr, "Invoker are not the Broker");
@@ -14,6 +15,7 @@ contract DataSwapper {
 
     // contract for data exchange
     function getData(string memory key) public returns (string memory) {
+        emit Logger("We get into getData");
         return dataM[key];
     }
 
@@ -22,6 +24,7 @@ contract DataSwapper {
         string memory destAddr,
         string memory key
     ) public {
+        emit Logger("We get into get");
         broker.emitInterchainEvent(
             destChainID,
             destAddr,
@@ -33,6 +36,7 @@ contract DataSwapper {
     }
 
     function set(string memory key, string memory value) public {
+        emit Logger("We get into set");
         dataM[key] = value;
     }
 
@@ -40,6 +44,7 @@ contract DataSwapper {
         public
         onlyBroker
     {
+        emit Logger("We get into interchainSet");
         set(key, value);
     }
 
@@ -48,6 +53,7 @@ contract DataSwapper {
         onlyBroker
         returns (bool, string memory)
     {
+        emit Logger("We get into interchainGet");
         return (true, dataM[key]);
     }
 }

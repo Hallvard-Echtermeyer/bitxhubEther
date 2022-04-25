@@ -9,7 +9,7 @@ Migrations dry-run (simulation)
 ===============================
 > Network name:    'rinkeby-fork'
 > Network id:      4
-> Block gas limit: 29999915 (0x1c9c32b)
+> Block gas limit: 30000000 (0x1c9c380)
 
 
 4_swapper.js
@@ -18,22 +18,22 @@ Migrations dry-run (simulation)
    Deploying 'DataSwapper'
    -----------------------
 undefined
-   > block number:        10287053
-   > block timestamp:     1646654814
+   > block number:        10565379
+   > block timestamp:     1650882579
    > account:             0xfBe29Cc66a5680Fbc0305f3A11369becc78AC945
-   > balance:             0.66336359734021026
-   > gas used:            886102 (0xd8556)
-   > gas price:           2.500000055 gwei
+   > balance:             0.477291806676947414
+   > gas used:            886090 (0xd854a)
+   > gas price:           2.500000037 gwei
    > value sent:          0 ETH
-   > total cost:          0.00221525504873561 ETH
+   > total cost:          0.00221522503278533 ETH
 
    -------------------------------------
-   > Total cost:     0.00221525504873561 ETH
+   > Total cost:     0.00221522503278533 ETH
 
 Summary
 =======
 > Total deployments:   1
-> Final cost:          0.00221525504873561 ETH
+> Final cost:          0.00221522503278533 ETH
 
 
 
@@ -50,26 +50,26 @@ Starting migrations...
 
    Deploying 'DataSwapper'
    -----------------------
-   > transaction hash:    0x0cda84f2f3f7ba3626fc2c1f0c3c76fc6e15d56a2200a7af4afff5daf65ce24d
+   > transaction hash:    0xa429a83ca97779a649fb4f477d2886e96f4f297a1ae709a9e6937cb873f5a101
 undefined
    > Blocks: 0            Seconds: 4
-   > contract address:    0xFfffA47899c067E3e0B9CAE90DAfeC9635306923
-   > block number:        10287058
-   > block timestamp:     1646654821
+   > contract address:    0x42dE462cFb9557D82C2d3A7E82c858DA3E941716
+   > block number:        10565384
+   > block timestamp:     1650882586
    > account:             0xfBe29Cc66a5680Fbc0305f3A11369becc78AC945
-   > balance:             0.654758524630621534
-   > gas used:            886102 (0xd8556)
-   > gas price:           2.500000116 gwei
+   > balance:             0.468686734030357775
+   > gas used:            886090 (0xd854a)
+   > gas price:           2.500000038 gwei
    > value sent:          0 ETH
-   > total cost:          0.002215255102787832 ETH
+   > total cost:          0.00221522503367142 ETH
 
    > Saving artifacts
    -------------------------------------
-   > Total cost:     0.002215255102787832 ETH
+   > Total cost:     0.00221522503367142 ETH
 
 Summary
 =======
 > Total deployments:   1
-> Final cost:          0.002215255102787832 ETH
+> Final cost:          0.00221522503367142 ETH
 
 

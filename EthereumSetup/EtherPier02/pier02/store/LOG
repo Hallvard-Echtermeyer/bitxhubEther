@@ -1,6 +1,45 @@
-=============== Mar 7, 2022 (CET) ===============
-13:07:23.647046 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-13:07:23.648666 db@open opening
-13:07:23.649060 version@stat F·[] S·0B[] Sc·[]
-13:07:23.649911 db@janitor F·2 G·0
-13:07:23.649931 db@open done T·1.252562ms
+=============== Apr 25, 2022 (CEST) ===============
+12:30:31.936927 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+12:30:31.938677 db@open opening
+12:30:31.939127 version@stat F·[] S·0B[] Sc·[]
+12:30:31.939995 db@janitor F·2 G·0
+12:30:31.940012 db@open done T·1.324423ms
+=============== Apr 25, 2022 (CEST) ===============
+12:37:52.636575 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+12:37:52.636706 version@stat F·[] S·0B[] Sc·[]
+12:37:52.636745 db@open opening
+12:37:52.636779 journal@recovery F·1
+12:37:52.637089 journal@recovery recovering @1
+12:37:52.637426 version@stat F·[] S·0B[] Sc·[]
+12:37:52.639836 db@janitor F·2 G·0
+12:37:52.639848 db@open done T·3.096976ms
+=============== Apr 25, 2022 (CEST) ===============
+13:01:31.955481 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:01:31.955596 version@stat F·[] S·0B[] Sc·[]
+13:01:31.955609 db@open opening
+13:01:31.955636 journal@recovery F·1
+13:01:31.955971 journal@recovery recovering @2
+13:01:31.957143 memdb@flush created L0@4 N·105 S·7KiB "header-1,v1":"wra..r-9,v47"
+13:01:31.957243 version@stat F·[1] S·7KiB[7KiB] Sc·[0.25]
+13:01:31.959247 db@janitor F·3 G·0
+13:01:31.959258 db@open done T·3.644085ms
+=============== Apr 25, 2022 (CEST) ===============
+13:31:49.214577 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:31:49.214700 version@stat F·[1] S·7KiB[7KiB] Sc·[0.25]
+13:31:49.214714 db@open opening
+13:31:49.214743 journal@recovery F·1
+13:31:49.215059 journal@recovery recovering @5
+13:31:49.216894 memdb@flush created L0@7 N·58 S·5KiB "hea..-25,v107":"wra..-37,v163"
+13:31:49.216992 version@stat F·[2] S·12KiB[12KiB] Sc·[0.50]
+13:31:49.220035 db@janitor F·4 G·0
+13:31:49.220046 db@open done T·5.327499ms
+=============== Apr 25, 2022 (CEST) ===============
+14:29:04.065429 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:29:04.065554 version@stat F·[2] S·12KiB[12KiB] Sc·[0.50]
+14:29:04.065599 db@open opening
+14:29:04.065629 journal@recovery F·1
+14:29:04.065901 journal@recovery recovering @8
+14:29:04.066872 memdb@flush created L0@10 N·40 S·3KiB "hea..-37,v166":"wra..-45,v204"
+14:29:04.066971 version@stat F·[3] S·16KiB[16KiB] Sc·[0.75]
+14:29:04.069106 db@janitor F·5 G·0
+14:29:04.069116 db@open done T·3.512182ms

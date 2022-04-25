@@ -62,11 +62,14 @@ const init = async () =>{
     //---------------------------------------------------------------------------------
 
     //Set the data for K V pair on both 01 and 02
-    // const receipt01 = await dataSwapper01.methods.set("key7", "value07").send({ from: address });
-    // console.log(await dataSwapper01.methods.getData("key").call());
+    
 
-    // const receipt02 = await dataSwapper02.methods.set("key8", "value08").send({ from: address });
-    // console.log(await dataSwapper02.methods.getData("key2").call());
+    // const receipt02 = await dataSwapper02.methods.set("key9", "value09").send({ from: address });
+    // const receipt03 = await dataSwapper02.methods.set("key10", "value10").send({ from: address });
+    // const receipt04 = await dataSwapper02.methods.set("key11", "value11").send({ from: address });
+    // const receipt05 = await dataSwapper02.methods.set("key12", "value12").send({ from: address });
+    // const receipt06 = await dataSwapper02.methods.set("key13", "value013").send({ from: address });
+    
 
 
     // await broker01.methods.register(SwapperAddress).send({ from: address });
@@ -81,7 +84,7 @@ const init = async () =>{
 
 
 
-    const second = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key13").send({from: address});
+    const second = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key12").send({from: address});
 
     // console.log(await dataSwapper01.methods.getData("key").call());
     // console.log(await dataSwapper01.methods.getData("key2").call());

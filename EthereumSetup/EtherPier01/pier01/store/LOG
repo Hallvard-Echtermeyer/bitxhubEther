@@ -1,6 +1,64 @@
-=============== Mar 7, 2022 (CET) ===============
-13:04:21.960426 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-13:04:21.962572 db@open opening
-13:04:21.962904 version@stat F·[] S·0B[] Sc·[]
-13:04:21.963750 db@janitor F·2 G·0
-13:04:21.963763 db@open done T·1.179972ms
+=============== Apr 25, 2022 (CEST) ===============
+12:27:53.838567 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+12:27:53.840169 db@open opening
+12:27:53.840593 version@stat F·[] S·0B[] Sc·[]
+12:27:53.841335 db@janitor F·2 G·0
+12:27:53.841349 db@open done T·1.172015ms
+=============== Apr 25, 2022 (CEST) ===============
+13:00:57.526523 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:00:57.526648 version@stat F·[] S·0B[] Sc·[]
+13:00:57.526669 db@open opening
+13:00:57.526739 journal@recovery F·1
+13:00:57.527677 journal@recovery recovering @1
+13:00:57.528829 memdb@flush created L0@2 N·105 S·7KiB "header-1,v1":"wra..r-9,v37"
+13:00:57.528970 version@stat F·[1] S·7KiB[7KiB] Sc·[0.25]
+13:00:57.531104 db@janitor F·3 G·0
+13:00:57.531137 db@open done T·4.450847ms
+=============== Apr 25, 2022 (CEST) ===============
+13:29:13.230625 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:29:13.230762 version@stat F·[1] S·7KiB[7KiB] Sc·[0.25]
+13:29:13.230791 db@open opening
+13:29:13.230838 journal@recovery F·1
+13:29:13.231900 journal@recovery recovering @3
+13:29:13.233234 memdb@flush created L0@5 N·50 S·5KiB "hea..-25,v107":"wra..-35,v154"
+13:29:13.233340 version@stat F·[2] S·12KiB[12KiB] Sc·[0.50]
+13:29:13.235710 db@janitor F·4 G·0
+13:29:13.235725 db@open done T·4.927622ms
+=============== Apr 25, 2022 (CEST) ===============
+13:31:52.420555 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:31:52.420677 version@stat F·[2] S·12KiB[12KiB] Sc·[0.50]
+13:31:52.420692 db@open opening
+13:31:52.420725 journal@recovery F·1
+13:31:52.421094 journal@recovery recovering @6
+13:31:52.422074 memdb@flush created L0@8 N·14 S·1KiB "hea..-35,v158":"wra..-37,v169"
+13:31:52.422176 version@stat F·[3] S·14KiB[14KiB] Sc·[0.75]
+13:31:52.424352 db@janitor F·5 G·0
+13:31:52.424364 db@open done T·3.664176ms
+=============== Apr 25, 2022 (CEST) ===============
+14:24:41.838239 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:24:41.838360 version@stat F·[3] S·14KiB[14KiB] Sc·[0.75]
+14:24:41.838390 db@open opening
+14:24:41.838420 journal@recovery F·1
+14:24:41.838768 journal@recovery recovering @9
+14:24:41.839970 memdb@flush created L0@11 N·32 S·3KiB "hea..-37,v173":"wra..-43,v202"
+14:24:41.840084 version@stat F·[4] S·17KiB[17KiB] Sc·[1.00]
+14:24:41.842444 db@janitor F·6 G·0
+14:24:41.842462 db@open done T·4.065687ms
+14:24:41.842482 table@compaction L0·4 -> L1·0 S·17KiB Q·205
+14:24:41.843528 table@build created L1@14 N·102 S·15KiB "header-1,v1":"wra..r-9,v37"
+14:24:41.843551 version@stat F·[0 1] S·15KiB[0B 15KiB] Sc·[0.00 0.00]
+14:24:41.844304 table@compaction committed F-3 S-2KiB Ke·0 D·99 T·1.803975ms
+14:24:41.844350 table@remove removed @8
+14:24:41.844372 table@remove removed @5
+14:24:41.844391 table@remove removed @2
+=============== Apr 25, 2022 (CEST) ===============
+14:29:09.121014 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:29:09.121237 version@stat F·[0 1] S·15KiB[0B 15KiB] Sc·[0.00 0.00]
+14:29:09.121251 db@open opening
+14:29:09.121282 journal@recovery F·1
+14:29:09.122147 journal@recovery recovering @12
+14:29:09.123748 memdb@flush created L0@15 N·14 S·1KiB "hea..-43,v206":"wra..-45,v217"
+14:29:09.123854 version@stat F·[1 1] S·16KiB[1KiB 15KiB] Sc·[0.25 0.00]
+14:29:09.127668 db@janitor F·5 G·1
+14:29:09.127676 db@janitor removing table-11
+14:29:09.127698 db@open done T·6.441128ms

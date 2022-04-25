@@ -1,7 +1,7 @@
 cd ../../EthereumSetup/EtherPier$1/pier$1/RelayChain/
 
 export LD_LIBRARY_PATH=$(pwd)
-./bitxhub --repo ../../../build_solo client governance vote --id 0x190F798885FF6b32Bc44137d1841E0a9cCbC65f4-0 --info approve --reason approve
+./bitxhub --repo ../../../build_solo client governance vote --id 0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-0 --info approve --reason approve
 
 ./bitxhub --repo ../../../build_solo client governance proposals --type AppchainMgr
 

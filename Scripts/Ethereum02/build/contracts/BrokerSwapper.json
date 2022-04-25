@@ -36,12 +36,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.6+commit.b259423e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"destChainID\",\"type\":\"address\"},{\"name\":\"destAddr\",\"type\":\"string\"},{\"name\":\"funcs\",\"type\":\"string\"},{\"name\":\"args\",\"type\":\"string\"},{\"name\":\"argscb\",\"type\":\"string\"},{\"name\":\"argsrb\",\"type\":\"string\"}],\"name\":\"emitInterchainEvent\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/data_swapper.sol\":\"BrokerSwapper\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/data_swapper.sol\":{\"keccak256\":\"0x231427a9018386e3e473001d4fda977b9f8e9fbaf98c27a0dc91eb3ba4ef0eaf\",\"urls\":[\"bzzr://f4863043dcb61e20a2c1972111044438855c9c0d3685138ef82fe26af762ded8\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.6+commit.b259423e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"destChainID\",\"type\":\"address\"},{\"name\":\"destAddr\",\"type\":\"string\"},{\"name\":\"funcs\",\"type\":\"string\"},{\"name\":\"args\",\"type\":\"string\"},{\"name\":\"argscb\",\"type\":\"string\"},{\"name\":\"argsrb\",\"type\":\"string\"}],\"name\":\"emitInterchainEvent\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/data_swapper.sol\":\"BrokerSwapper\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/data_swapper.sol\":{\"keccak256\":\"0xce3c681eabcf9dd1d9ecfef08fe2af700d55b37d18a81f5a7dcc2024ebc372d8\",\"urls\":[\"bzzr://0c4e7058c6ffc9fbba2ba075cc10b30d54c4b80db2da582d6003fec19e1bcd4a\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity >=0.5.6;\n\ncontract DataSwapper {\n    mapping(string => string) dataM; // map for accounts\n    // change the address of Broker accordingly\n    address BrokerAddr = 0xc4C4cDC0ee90d2E1B1D029ADA1ad6c8510c02397;\n    BrokerSwapper broker = BrokerSwapper(BrokerAddr);\n\n    // AccessControl\n    modifier onlyBroker() {\n        require(msg.sender == BrokerAddr, \"Invoker are not the Broker\");\n        _;\n    }\n\n    // contract for data exchange\n    function getData(string memory key) public returns (string memory) {\n        return dataM[key];\n    }\n\n    function get(\n        address destChainID,\n        string memory destAddr,\n        string memory key\n    ) public {\n        broker.emitInterchainEvent(\n            destChainID,\n            destAddr,\n            \"interchainGet,interchainSet,\",\n            key,\n            key,\n            \"\"\n        );\n    }\n\n    function set(string memory key, string memory value) public {\n        dataM[key] = value;\n    }\n\n    function interchainSet(string memory key, string memory value)\n        public\n        onlyBroker\n    {\n        set(key, value);\n    }\n\n    function interchainGet(string memory key)\n        public\n        onlyBroker\n        returns (bool, string memory)\n    {\n        return (true, dataM[key]);\n    }\n}\n\ncontract BrokerSwapper {\n    function emitInterchainEvent(\n        address destChainID,\n        string memory destAddr,\n        string memory funcs,\n        string memory args,\n        string memory argscb,\n        string memory argsrb\n    ) public;\n}\n",
+  "source": "pragma solidity >=0.5.6;\n\ncontract DataSwapper {\n    mapping(string => string) dataM; // map for accounts\n    // change the address of Broker accordingly\n    address BrokerAddr = 0x4Ef844F288FB2475BFd5EbbFc8BC511FaceeBa8F;\n    BrokerSwapper broker = BrokerSwapper(BrokerAddr);\n\n    // AccessControl\n    modifier onlyBroker() {\n        require(msg.sender == BrokerAddr, \"Invoker are not the Broker\");\n        _;\n    }\n\n    // contract for data exchange\n    function getData(string memory key) public returns (string memory) {\n        return dataM[key];\n    }\n\n    function get(\n        address destChainID,\n        string memory destAddr,\n        string memory key\n    ) public {\n        broker.emitInterchainEvent(\n            destChainID,\n            destAddr,\n            \"interchainGet,interchainSet,\",\n            key,\n            key,\n            \"\"\n        );\n    }\n\n    function set(string memory key, string memory value) public {\n        dataM[key] = value;\n    }\n\n    function interchainSet(string memory key, string memory value)\n        public\n        onlyBroker\n    {\n        set(key, value);\n    }\n\n    function interchainGet(string memory key)\n        public\n        onlyBroker\n        returns (bool, string memory)\n    {\n        return (true, dataM[key]);\n    }\n}\n\ncontract BrokerSwapper {\n    function emitInterchainEvent(\n        address destChainID,\n        string memory destAddr,\n        string memory funcs,\n        string memory args,\n        string memory argscb,\n        string memory argsrb\n    ) public;\n}\n",
   "sourcePath": "/home/hallvard/Masters-Programing/EtherBit/Scripts/Ethereum02/contracts/data_swapper.sol",
   "ast": {
     "absolutePath": "project:/contracts/data_swapper.sol",
@@ -151,7 +151,7 @@
             },
             "value": {
               "argumentTypes": null,
-              "hexValue": "307863344334634443306565393064324531423144303239414441316164366338353130633032333937",
+              "hexValue": "307834456638343446323838464232343735424664354562624663384243353131466163656542613846",
               "id": 7,
               "isConstant": false,
               "isLValue": false,
@@ -165,7 +165,7 @@
                 "typeIdentifier": "t_address_payable",
                 "typeString": "address payable"
               },
-              "value": "0xc4C4cDC0ee90d2E1B1D029ADA1ad6c8510c02397"
+              "value": "0x4Ef844F288FB2475BFd5EbbFc8BC511FaceeBa8F"
             },
             "visibility": "internal"
           },
@@ -1681,7 +1681,7 @@
               {
                 "attributes": {
                   "argumentTypes": null,
-                  "hexvalue": "307863344334634443306565393064324531423144303239414441316164366338353130633032333937",
+                  "hexvalue": "307834456638343446323838464232343735424664354562624663384243353131466163656542613846",
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -1689,7 +1689,7 @@
                   "subdenomination": null,
                   "token": "number",
                   "type": "address payable",
-                  "value": "0xc4C4cDC0ee90d2E1B1D029ADA1ad6c8510c02397"
+                  "value": "0x4Ef844F288FB2475BFd5EbbFc8BC511FaceeBa8F"
                 },
                 "id": 7,
                 "name": "Literal",
@@ -3231,7 +3231,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.5",
-  "updatedAt": "2022-03-07T12:05:58.973Z",
+  "updatedAt": "2022-04-25T10:28:47.203Z",
   "devdoc": {
     "methods": {}
   },

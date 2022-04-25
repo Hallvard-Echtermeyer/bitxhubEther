@@ -14,10 +14,17 @@ fi
 echo "=======Set up go lang======"
 
 # Get the version 1.13 from google
-wget https://dl.google.com/go/go1.17.6.linux-amd64.tar.gz
+# wget https://dl.google.com/go/go1.17.6.linux-amd64.tar.gz
+# act='ttyout="*"'
+# tar -xf go1.17.6.linux-amd64.tar.gz --checkpoint --checkpoint-action=$act -C /usr/local 
+# rm go1.17.6.linux-amd64.tar.gz
+
+
+
+wget https://dl.google.com/go/go1.16.15.linux-amd64.tar.gz
 act='ttyout="*"'
-tar -xf go1.17.6.linux-amd64.tar.gz --checkpoint --checkpoint-action=$act -C /usr/local 
-rm go1.17.6.linux-amd64.tar.gz
+tar -xf go1.16.15.linux-amd64.tar.gz --checkpoint --checkpoint-action=$act -C /usr/local 
+rm go1.16.15.linux-amd64.tar.gz
 
 echo "export GOROOT=/usr/local/go" >> ~/.bashrc
 echo "export GOPATH=/home/hallvard/go" >> ~/.bashrc

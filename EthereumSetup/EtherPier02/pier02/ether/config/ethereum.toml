@@ -1,11 +1,11 @@
 [ether]
 addr = "wss://rinkeby.infura.io/ws/v3/731722c66a504aa6bcc25135f3dfc3f9"
 name = "SecondEthereum"
-contract_address = "0xc4C4cDC0ee90d2E1B1D029ADA1ad6c8510c02397"
+contract_address = "0x4Ef844F288FB2475BFd5EbbFc8BC511FaceeBa8F"
 key_path = "account.key"
 password = "password"
 min_confirm = 1
 
 [contract_abi]
-0xFfffA47899c067E3e0B9CAE90DAfeC9635306923="data_swapper.abi"
-0xdD1fD495E34A523a9257aec1BdaB4B2E939A3aa3="transfer.abi"
+0x42dE462cFb9557D82C2d3A7E82c858DA3E941716="data_swapper.abi"
+0x21d1939340C396f95b91f4Ae37271d402592EabA="transfer.abi"

@@ -1,0 +1,308 @@
+time="12:27:55.342" level=info msg="Establish connection with bitxhub localhost:60011 successfully" module=app
+time="12:27:57.274" level=info msg="Pier information" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 interchain_counter="map[]" module=app receipt_counter="map[]" source_receipt_counter="map[]"
+time="12:27:57.390" level=info msg="Monitor started" module=monitor
+time="12:27:57.390" level=info msg="Executor started" module=executor
+time="12:27:57.391" level=info msg="BitXHub lite recover" begin=1 end=6 module=bxh_lite
+time="12:27:57.394" level=info msg="Persist block header" height=1 module=bxh_lite
+time="12:27:57.394" level=info msg="Persist block header" height=2 module=bxh_lite
+time="12:27:57.394" level=info msg="Persist block header" height=3 module=bxh_lite
+time="12:27:57.394" level=info msg="Persist block header" height=4 module=bxh_lite
+time="12:27:57.394" level=info msg="Persist block header" height=5 module=bxh_lite
+time="12:27:57.394" level=info msg="Persist block header" height=6 module=bxh_lite
+time="12:27:57.394" level=info msg="BitXHub lite started" bitxhub_height=6 current_height=6 module=bxh_lite
+time="12:27:57.395" level=info msg="Syncer recover" begin=1 end=6 module=syncer
+time="12:27:57.396" level=info msg="Handle interchain tx wrapper" count=0 height=1 index=0 module=syncer
+time="12:27:57.396" level=info msg="Handle interchain tx wrapper" count=0 height=2 index=0 module=syncer
+time="12:27:57.396" level=info msg="Handle interchain tx wrapper" count=0 height=3 index=0 module=syncer
+time="12:27:57.396" level=info msg="Handle interchain tx wrapper" count=0 height=4 index=0 module=syncer
+time="12:27:57.396" level=info msg="Handle interchain tx wrapper" count=0 height=5 index=0 module=syncer
+time="12:27:57.396" level=info msg="Handle interchain tx wrapper" count=0 height=6 index=0 module=syncer
+time="12:27:57.396" level=info msg="Syncer started" bitxhub_height=6 current_height=6 module=syncer
+time="12:27:57.732" level=info msg="Exchanger started" module=exchanger
+time="12:30:23.234" level=warning msg="query header: header at 7 not found" module=syncer
+time="12:30:23.234" level=info msg="Persist block header" height=7 module=bxh_lite
+time="12:30:24.267" level=info msg="Persist block header" height=8 module=bxh_lite
+time="12:30:25.235" level=info msg="Handle interchain tx wrapper" count=0 height=7 index=0 module=syncer
+time="12:30:25.235" level=info msg="Handle interchain tx wrapper" count=0 height=8 index=0 module=syncer
+time="12:30:31.304" level=warning msg="query header: header at 9 not found" module=syncer
+time="12:30:31.304" level=info msg="Persist block header" height=9 module=bxh_lite
+time="12:30:31.604" level=info msg="Persist block header" height=10 module=bxh_lite
+time="12:30:33.304" level=info msg="Handle interchain tx wrapper" count=0 height=9 index=0 module=syncer
+time="12:30:33.304" level=info msg="Handle interchain tx wrapper" count=0 height=10 index=0 module=syncer
+time="12:34:02.769" level=warning msg="query header: header at 11 not found" module=syncer
+time="12:34:02.769" level=info msg="Persist block header" height=11 module=bxh_lite
+time="12:34:04.770" level=info msg="Handle interchain tx wrapper" count=0 height=11 index=0 module=syncer
+time="12:36:03.683" level=warning msg="query header: header at 12 not found" module=syncer
+time="12:36:03.683" level=info msg="Persist block header" height=12 module=bxh_lite
+time="12:36:05.685" level=info msg="Handle interchain tx wrapper" count=0 height=12 index=0 module=syncer
+time="12:36:21.884" level=info msg="Persist block header" height=13 module=bxh_lite
+time="12:36:21.884" level=info msg="Handle interchain tx wrapper" count=0 height=13 index=0 module=syncer
+time="12:37:27.218" level=warning msg="query header: header at 14 not found" module=syncer
+time="12:37:27.218" level=info msg="Persist block header" height=14 module=bxh_lite
+time="12:37:27.517" level=info msg="Persist block header" height=15 module=bxh_lite
+time="12:37:29.219" level=info msg="Handle interchain tx wrapper" count=0 height=14 index=0 module=syncer
+time="12:37:29.219" level=info msg="Handle interchain tx wrapper" count=0 height=15 index=0 module=syncer
+time="12:41:55.073" level=warning msg="query header: header at 16 not found" module=syncer
+time="12:41:55.073" level=info msg="Persist block header" height=16 module=bxh_lite
+time="12:41:57.073" level=info msg="Handle interchain tx wrapper" count=0 height=16 index=0 module=syncer
+time="12:42:13.835" level=info msg="Persist block header" height=17 module=bxh_lite
+time="12:42:13.835" level=info msg="Handle interchain tx wrapper" count=1 height=17 index=0 module=syncer
+time="12:42:13.835" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-1 index=1 module=executor status=true type=RECEIPT_SUCCESS
+time="12:42:52.811" level=info msg="Execute callback" fields.msg= index=1 module=executor status=true type=RECEIPT_SUCCESS
+time="12:42:52.812" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-1 module=exchanger type=RECEIPT_SUCCESS
+time="12:43:55.118" level=warning msg="query header: header at 18 not found" module=syncer
+time="12:43:55.118" level=info msg="Persist block header" height=18 module=bxh_lite
+time="12:43:57.119" level=info msg="Handle interchain tx wrapper" count=0 height=18 index=0 module=syncer
+time="12:44:12.056" level=warning msg="query header: header at 19 not found" module=syncer
+time="12:44:12.056" level=info msg="Persist block header" height=19 module=bxh_lite
+time="12:44:14.056" level=info msg="Handle interchain tx wrapper" count=1 height=19 index=0 module=syncer
+time="12:44:14.057" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-2 index=2 module=executor status=true type=RECEIPT_SUCCESS
+time="12:44:25.236" level=info msg="Execute callback" fields.msg= index=2 module=executor status=true type=RECEIPT_SUCCESS
+time="12:44:25.236" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-2 module=exchanger type=RECEIPT_SUCCESS
+time="12:47:27.874" level=warning msg="query header: header at 20 not found" module=syncer
+time="12:47:27.874" level=info msg="Persist block header" height=20 module=bxh_lite
+time="12:47:29.874" level=info msg="Handle interchain tx wrapper" count=0 height=20 index=0 module=syncer
+time="12:47:41.443" level=warning msg="query header: header at 21 not found" module=syncer
+time="12:47:41.443" level=info msg="Persist block header" height=21 module=bxh_lite
+time="12:47:43.443" level=info msg="Handle interchain tx wrapper" count=1 height=21 index=0 module=syncer
+time="12:47:43.443" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-3 index=3 module=executor status=true type=RECEIPT_SUCCESS
+time="12:48:56.798" level=info msg="Execute callback" fields.msg= index=3 module=executor status=true type=RECEIPT_SUCCESS
+time="12:48:56.799" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-3 module=exchanger type=RECEIPT_SUCCESS
+time="12:49:27.863" level=warning msg="query header: header at 22 not found" module=syncer
+time="12:49:27.863" level=info msg="Persist block header" height=22 module=bxh_lite
+time="12:49:29.864" level=info msg="Handle interchain tx wrapper" count=0 height=22 index=0 module=syncer
+time="12:50:57.539" level=warning msg="query header: header at 23 not found" module=syncer
+time="12:50:57.539" level=info msg="Persist block header" height=23 module=bxh_lite
+time="12:50:59.539" level=info msg="Handle interchain tx wrapper" count=1 height=23 index=0 module=syncer
+time="12:50:59.540" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-4 index=4 module=executor status=true type=RECEIPT_SUCCESS
+time="12:51:10.692" level=info msg="Execute callback" fields.msg= index=4 module=executor status=true type=RECEIPT_SUCCESS
+time="12:51:10.692" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-4 module=exchanger type=RECEIPT_SUCCESS
+time="12:54:57.967" level=warning msg="query header: header at 24 not found" module=syncer
+time="12:54:57.967" level=info msg="Persist block header" height=24 module=bxh_lite
+time="12:54:59.967" level=info msg="Handle interchain tx wrapper" count=0 height=24 index=0 module=syncer
+time="12:55:12.408" level=info msg="Ignore ibtp" ibtp_id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-5 index=5 module=exchanger to_counter=5
+time="12:55:42.412" level=warning msg="query header: header at 25 not found" module=syncer
+time="12:55:42.412" level=info msg="Persist block header" height=25 module=bxh_lite
+time="12:55:44.413" level=info msg="Handle interchain tx wrapper" count=1 height=25 index=0 module=syncer
+time="12:55:44.413" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-5 index=5 module=executor status=true type=RECEIPT_SUCCESS
+time="12:56:10.368" level=info msg="Execute callback" fields.msg= index=5 module=executor status=true type=RECEIPT_SUCCESS
+time="12:56:10.368" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-5 module=exchanger type=RECEIPT_SUCCESS
+time="13:00:41.977" level=info msg="Monitor stopped" module=monitor
+time="13:00:41.979" level=info msg="Executor stopped" module=executor
+time="13:00:41.979" level=info msg="BitXHub lite stopped" module=bxh_lite
+time="13:00:41.979" level=info msg="Syncer stopped" module=syncer
+time="13:00:41.979" level=info msg="Exchanger stopped" module=exchanger
+time="13:01:03.537" level=info msg="Establish connection with bitxhub localhost:60011 successfully" module=app
+time="13:01:05.479" level=info msg="Pier information" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 interchain_counter="map[0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5:5]" module=app receipt_counter="map[0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5:5]" source_receipt_counter="map[]"
+time="13:01:05.597" level=info msg="Monitor started" module=monitor
+time="13:01:05.597" level=info msg="Executor started" module=executor
+time="13:01:05.598" level=info msg="BitXHub lite recover" begin=25 end=25 module=bxh_lite
+time="13:01:05.598" level=info msg="Persist block header" height=25 module=bxh_lite
+time="13:01:05.598" level=info msg="BitXHub lite started" bitxhub_height=25 current_height=25 module=bxh_lite
+time="13:01:05.598" level=info msg="Syncer recover" begin=25 end=25 module=syncer
+time="13:01:05.599" level=info msg="Handle interchain tx wrapper" count=1 height=25 index=0 module=syncer
+time="13:01:05.599" level=info msg="Syncer started" bitxhub_height=25 current_height=25 module=syncer
+time="13:01:05.712" level=info msg="Get missing callbacks from bitxhub" begin=6 end=6 module=exchanger to=0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5
+time="13:01:05.825" level=info msg="Get missing event from contract" index=6 module=exchanger to=0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5
+time="13:01:06.467" level=info msg="Persist block header" height=26 module=bxh_lite
+time="13:01:06.467" level=info msg="Handle interchain tx wrapper" count=0 height=26 index=0 module=syncer
+time="13:01:06.557" level=info msg="Get missing event from contract" index=7 module=exchanger to=0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5
+time="13:01:07.201" level=info msg="Persist block header" height=27 module=bxh_lite
+time="13:01:07.201" level=warning msg="query header: header at 27 not found" module=syncer
+time="13:01:07.405" level=info msg="Exchanger started" module=exchanger
+time="13:01:07.405" level=warning msg="Ignore ibtp with invalid index" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-5 module=exchanger type=RECEIPT_SUCCESS
+time="13:01:09.202" level=info msg="Handle interchain tx wrapper" count=0 height=27 index=0 module=syncer
+time="13:01:45.938" level=warning msg="query header: header at 28 not found" module=syncer
+time="13:01:45.938" level=info msg="Persist block header" height=28 module=bxh_lite
+time="13:01:47.938" level=info msg="Handle interchain tx wrapper" count=1 height=28 index=0 module=syncer
+time="13:01:47.938" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-6 index=6 module=executor status=true type=RECEIPT_SUCCESS
+time="13:01:58.002" level=info msg="Persist block header" height=29 module=bxh_lite
+time="13:01:58.002" level=warning msg="query header: header at 29 not found" module=syncer
+time="13:01:59.177" level=info msg="Execute callback" fields.msg= index=6 module=executor status=true type=RECEIPT_SUCCESS
+time="13:01:59.177" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-6 module=exchanger type=RECEIPT_SUCCESS
+time="13:02:00.002" level=info msg="Handle interchain tx wrapper" count=1 height=29 index=0 module=syncer
+time="13:02:00.002" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-7 index=7 module=executor status=true type=RECEIPT_SUCCESS
+time="13:04:12.217" level=info msg="Execute callback" fields.msg= index=7 module=executor status=true type=RECEIPT_SUCCESS
+time="13:04:12.217" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-7 module=exchanger type=RECEIPT_SUCCESS
+time="13:05:15.084" level=info msg="Persist block header" height=30 module=bxh_lite
+time="13:05:15.084" level=warning msg="query header: header at 30 not found" module=syncer
+time="13:05:15.396" level=info msg="Persist block header" height=31 module=bxh_lite
+time="13:05:17.085" level=info msg="Handle interchain tx wrapper" count=0 height=30 index=0 module=syncer
+time="13:05:17.085" level=info msg="Handle interchain tx wrapper" count=0 height=31 index=0 module=syncer
+time="13:05:26.948" level=warning msg="query header: header at 32 not found" module=syncer
+time="13:05:26.948" level=info msg="Persist block header" height=32 module=bxh_lite
+time="13:05:28.949" level=info msg="Handle interchain tx wrapper" count=1 height=32 index=0 module=syncer
+time="13:05:28.950" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-8 index=8 module=executor status=true type=RECEIPT_SUCCESS
+time="13:09:40.590" level=info msg="Execute callback" fields.msg= index=8 module=executor status=true type=RECEIPT_SUCCESS
+time="13:09:40.590" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-8 module=exchanger type=RECEIPT_SUCCESS
+time="13:09:42.780" level=warning msg="query header: header at 33 not found" module=syncer
+time="13:09:42.780" level=info msg="Persist block header" height=33 module=bxh_lite
+time="13:09:44.781" level=info msg="Handle interchain tx wrapper" count=1 height=33 index=0 module=syncer
+time="13:09:44.781" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-9 index=9 module=executor status=true type=RECEIPT_SUCCESS
+time="13:09:56.028" level=info msg="Execute callback" fields.msg= index=9 module=executor status=true type=RECEIPT_SUCCESS
+time="13:09:56.028" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-9 module=exchanger type=RECEIPT_SUCCESS
+time="13:16:12.310" level=warning msg="query header: header at 34 not found" module=syncer
+time="13:16:12.310" level=info msg="Persist block header" height=34 module=bxh_lite
+time="13:16:14.311" level=info msg="Handle interchain tx wrapper" count=0 height=34 index=0 module=syncer
+time="13:16:25.901" level=warning msg="query header: header at 35 not found" module=syncer
+time="13:16:25.901" level=info msg="Persist block header" height=35 module=bxh_lite
+time="13:16:26.914" level=info msg="Ignore ibtp" ibtp_id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-10 index=10 module=exchanger to_counter=10
+time="13:16:27.901" level=info msg="Handle interchain tx wrapper" count=1 height=35 index=0 module=syncer
+time="13:16:27.901" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-10 index=10 module=executor status=true type=RECEIPT_SUCCESS
+time="13:16:44.253" level=info msg="Execute callback" fields.msg= index=10 module=executor status=true type=RECEIPT_SUCCESS
+time="13:16:44.253" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-10 module=exchanger type=RECEIPT_SUCCESS
+time="13:29:09.476" level=info msg="Monitor stopped" module=monitor
+time="13:29:09.478" level=info msg="Executor stopped" module=executor
+time="13:29:09.478" level=info msg="BitXHub lite stopped" module=bxh_lite
+time="13:29:09.478" level=info msg="Syncer stopped" module=syncer
+time="13:29:09.478" level=info msg="Exchanger stopped" module=exchanger
+time="13:29:16.238" level=info msg="Establish connection with bitxhub localhost:60011 successfully" module=app
+time="13:29:17.988" level=info msg="Pier information" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 interchain_counter="map[0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5:10]" module=app receipt_counter="map[0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5:10]" source_receipt_counter="map[]"
+time="13:29:18.106" level=info msg="Monitor started" module=monitor
+time="13:29:18.106" level=info msg="Executor started" module=executor
+time="13:29:18.107" level=info msg="BitXHub lite recover" begin=35 end=35 module=bxh_lite
+time="13:29:18.107" level=info msg="Persist block header" height=35 module=bxh_lite
+time="13:29:18.107" level=info msg="BitXHub lite started" bitxhub_height=35 current_height=35 module=bxh_lite
+time="13:29:18.108" level=info msg="Syncer recover" begin=35 end=35 module=syncer
+time="13:29:18.108" level=info msg="Handle interchain tx wrapper" count=1 height=35 index=0 module=syncer
+time="13:29:18.108" level=info msg="Syncer started" bitxhub_height=35 current_height=35 module=syncer
+time="13:29:18.221" level=info msg="Get missing callbacks from bitxhub" begin=11 end=11 module=exchanger to=0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5
+time="13:29:18.332" level=info msg="Get missing event from contract" index=11 module=exchanger to=0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5
+time="13:29:18.972" level=info msg="Persist block header" height=36 module=bxh_lite
+time="13:29:18.972" level=info msg="Handle interchain tx wrapper" count=0 height=36 index=0 module=syncer
+time="13:29:19.173" level=info msg="Exchanger started" module=exchanger
+time="13:29:19.173" level=warning msg="Ignore ibtp with invalid index" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-10 module=exchanger type=RECEIPT_SUCCESS
+time="13:30:59.829" level=info msg="Persist block header" height=37 module=bxh_lite
+time="13:30:59.829" level=warning msg="query header: header at 37 not found" module=syncer
+time="13:31:01.829" level=info msg="Handle interchain tx wrapper" count=1 height=37 index=0 module=syncer
+time="13:31:01.829" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-11 index=11 module=executor status=true type=RECEIPT_SUCCESS
+time="13:31:30.891" level=info msg="Execute callback" fields.msg= index=11 module=executor status=true type=RECEIPT_SUCCESS
+time="13:31:30.891" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-11 module=exchanger type=RECEIPT_SUCCESS
+time="13:31:37.305" level=info msg="Monitor stopped" module=monitor
+time="13:31:37.308" level=info msg="Executor stopped" module=executor
+time="13:31:37.308" level=info msg="BitXHub lite stopped" module=bxh_lite
+time="13:31:37.308" level=info msg="Syncer stopped" module=syncer
+time="13:31:37.308" level=info msg="Exchanger stopped" module=exchanger
+time="13:31:37.308" level=error msg="receive: rpc error: code = Canceled desc = context canceled" module=app
+time="13:31:58.431" level=info msg="Establish connection with bitxhub localhost:60011 successfully" module=app
+time="13:32:00.324" level=info msg="Pier information" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 interchain_counter="map[0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5:11]" module=app receipt_counter="map[0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5:11]" source_receipt_counter="map[]"
+time="13:32:00.440" level=info msg="Monitor started" module=monitor
+time="13:32:00.440" level=info msg="Executor started" module=executor
+time="13:32:00.440" level=info msg="BitXHub lite recover" begin=37 end=37 module=bxh_lite
+time="13:32:00.441" level=info msg="Persist block header" height=37 module=bxh_lite
+time="13:32:00.441" level=info msg="BitXHub lite started" bitxhub_height=37 current_height=37 module=bxh_lite
+time="13:32:00.441" level=info msg="Syncer recover" begin=37 end=37 module=syncer
+time="13:32:00.441" level=info msg="Handle interchain tx wrapper" count=1 height=37 index=0 module=syncer
+time="13:32:00.442" level=info msg="Syncer started" bitxhub_height=37 current_height=37 module=syncer
+time="13:32:00.556" level=info msg="Get missing callbacks from bitxhub" begin=12 end=12 module=exchanger to=0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5
+time="13:32:00.817" level=info msg="Exchanger started" module=exchanger
+time="13:32:00.817" level=warning msg="Ignore ibtp with invalid index" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-11 module=exchanger type=RECEIPT_SUCCESS
+time="13:32:45.875" level=info msg="Persist block header" height=38 module=bxh_lite
+time="13:32:45.875" level=warning msg="query header: header at 38 not found" module=syncer
+time="13:32:47.876" level=info msg="Handle interchain tx wrapper" count=0 height=38 index=0 module=syncer
+time="13:33:02.804" level=info msg="Persist block header" height=39 module=bxh_lite
+time="13:33:02.804" level=warning msg="query header: header at 39 not found" module=syncer
+time="13:33:04.804" level=info msg="Handle interchain tx wrapper" count=1 height=39 index=0 module=syncer
+time="13:33:04.804" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-12 index=12 module=executor status=true type=RECEIPT_SUCCESS
+time="13:33:16.114" level=info msg="Execute callback" fields.msg= index=12 module=executor status=true type=RECEIPT_SUCCESS
+time="13:33:16.114" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-12 module=exchanger type=RECEIPT_SUCCESS
+time="13:38:49.007" level=info msg="Persist block header" height=40 module=bxh_lite
+time="13:38:49.007" level=warning msg="query header: header at 40 not found" module=syncer
+time="13:38:51.008" level=info msg="Handle interchain tx wrapper" count=0 height=40 index=0 module=syncer
+time="13:40:32.848" level=warning msg="query header: header at 41 not found" module=syncer
+time="13:40:32.848" level=info msg="Persist block header" height=41 module=bxh_lite
+time="13:40:34.848" level=info msg="Handle interchain tx wrapper" count=1 height=41 index=0 module=syncer
+time="13:40:34.848" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-13 index=13 module=executor status=true type=RECEIPT_SUCCESS
+time="13:40:51.347" level=info msg="Execute callback" fields.msg= index=13 module=executor status=true type=RECEIPT_SUCCESS
+time="13:40:51.347" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-13 module=exchanger type=RECEIPT_SUCCESS
+time="13:49:19.205" level=info msg="Persist block header" height=42 module=bxh_lite
+time="13:49:19.205" level=warning msg="query header: header at 42 not found" module=syncer
+time="13:49:21.206" level=info msg="Handle interchain tx wrapper" count=0 height=42 index=0 module=syncer
+time="13:49:37.942" level=info msg="Persist block header" height=43 module=bxh_lite
+time="13:49:37.942" level=warning msg="query header: header at 43 not found" module=syncer
+time="13:49:39.943" level=info msg="Handle interchain tx wrapper" count=1 height=43 index=0 module=syncer
+time="13:49:39.944" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-14 index=14 module=executor status=true type=RECEIPT_SUCCESS
+time="13:49:51.160" level=info msg="Execute callback" fields.msg= index=14 module=executor status=true type=RECEIPT_SUCCESS
+time="13:49:51.160" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-14 module=exchanger type=RECEIPT_SUCCESS
+time="13:49:51.452" level=info msg="Ignore ibtp" ibtp_id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-14 index=14 module=exchanger to_counter=14
+time="14:24:39.953" level=info msg="Monitor stopped" module=monitor
+time="14:24:39.955" level=info msg="Executor stopped" module=executor
+time="14:24:39.955" level=info msg="BitXHub lite stopped" module=bxh_lite
+time="14:24:39.955" level=info msg="Syncer stopped" module=syncer
+time="14:24:39.955" level=info msg="Exchanger stopped" module=exchanger
+time="14:24:43.344" level=info msg="Establish connection with bitxhub localhost:60011 successfully" module=app
+time="14:24:45.225" level=info msg="Pier information" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 interchain_counter="map[0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5:14]" module=app receipt_counter="map[0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5:14]" source_receipt_counter="map[]"
+time="14:24:45.340" level=info msg="Monitor started" module=monitor
+time="14:24:45.340" level=info msg="Executor started" module=executor
+time="14:24:45.341" level=info msg="BitXHub lite recover" begin=43 end=43 module=bxh_lite
+time="14:24:45.341" level=info msg="Persist block header" height=43 module=bxh_lite
+time="14:24:45.341" level=info msg="BitXHub lite started" bitxhub_height=43 current_height=43 module=bxh_lite
+time="14:24:45.342" level=info msg="Syncer recover" begin=43 end=43 module=syncer
+time="14:24:45.342" level=info msg="Handle interchain tx wrapper" count=1 height=43 index=0 module=syncer
+time="14:24:45.342" level=info msg="Syncer started" bitxhub_height=43 current_height=43 module=syncer
+time="14:24:45.455" level=info msg="Get missing callbacks from bitxhub" begin=15 end=15 module=exchanger to=0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5
+time="14:24:45.571" level=info msg="Get missing event from contract" index=15 module=exchanger to=0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5
+time="14:24:46.213" level=info msg="Persist block header" height=44 module=bxh_lite
+time="14:24:46.213" level=warning msg="query header: header at 44 not found" module=syncer
+time="14:24:46.415" level=info msg="Exchanger started" module=exchanger
+time="14:24:46.415" level=warning msg="Ignore ibtp with invalid index" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-14 module=exchanger type=RECEIPT_SUCCESS
+time="14:24:48.214" level=info msg="Handle interchain tx wrapper" count=0 height=44 index=0 module=syncer
+time="14:24:59.848" level=info msg="Persist block header" height=45 module=bxh_lite
+time="14:24:59.848" level=warning msg="query header: header at 45 not found" module=syncer
+time="14:25:01.849" level=info msg="Handle interchain tx wrapper" count=1 height=45 index=0 module=syncer
+time="14:25:01.849" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-15 index=15 module=executor status=true type=RECEIPT_SUCCESS
+time="14:28:59.757" level=info msg="Monitor stopped" module=monitor
+time="14:28:59.759" level=info msg="Executor stopped" module=executor
+time="14:28:59.759" level=info msg="BitXHub lite stopped" module=bxh_lite
+time="14:28:59.759" level=info msg="Syncer stopped" module=syncer
+time="14:28:59.759" level=info msg="Exchanger stopped" module=exchanger
+time="14:29:40.652" level=error msg="Send view to get interchain meta error: %!w(*errors.errorString=&{chosen client is not reachable}) ... retry later" module=app
+time="14:29:50.158" level=info msg="Establish connection with bitxhub localhost:60011 successfully" module=app
+time="14:29:51.871" level=info msg="Pier information" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 interchain_counter="map[0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5:15]" module=app receipt_counter="map[0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5:15]" source_receipt_counter="map[]"
+time="14:29:51.989" level=info msg="Monitor started" module=monitor
+time="14:29:51.989" level=info msg="Executor started" module=executor
+time="14:29:51.989" level=info msg="BitXHub lite recover" begin=45 end=45 module=bxh_lite
+time="14:29:51.989" level=info msg="Persist block header" height=45 module=bxh_lite
+time="14:29:51.989" level=info msg="BitXHub lite started" bitxhub_height=45 current_height=45 module=bxh_lite
+time="14:29:51.990" level=info msg="Syncer recover" begin=45 end=45 module=syncer
+time="14:29:51.990" level=info msg="Handle interchain tx wrapper" count=1 height=45 index=0 module=syncer
+time="14:29:51.990" level=info msg="Syncer started" bitxhub_height=45 current_height=45 module=syncer
+time="14:29:52.107" level=info msg="Get missing callbacks from bitxhub" begin=16 end=16 module=exchanger to=0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5
+time="14:29:52.353" level=info msg="Exchanger started" module=exchanger
+time="14:29:52.353" level=warning msg="Ignore ibtp with invalid index" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-15 module=exchanger type=RECEIPT_SUCCESS
+time="14:30:13.528" level=info msg="Persist block header" height=46 module=bxh_lite
+time="14:30:13.528" level=warning msg="query header: header at 46 not found" module=syncer
+time="14:30:15.528" level=info msg="Handle interchain tx wrapper" count=0 height=46 index=0 module=syncer
+time="14:31:43.015" level=info msg="Persist block header" height=47 module=bxh_lite
+time="14:31:43.015" level=warning msg="query header: header at 47 not found" module=syncer
+time="14:31:45.016" level=info msg="Handle interchain tx wrapper" count=1 height=47 index=0 module=syncer
+time="14:31:45.016" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-16 index=16 module=executor status=true type=RECEIPT_SUCCESS
+time="14:32:14.107" level=info msg="Execute callback" fields.msg= index=16 module=executor status=true type=RECEIPT_SUCCESS
+time="14:32:14.107" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-16 module=exchanger type=RECEIPT_SUCCESS
+time="14:48:16.843" level=info msg="Persist block header" height=48 module=bxh_lite
+time="14:48:16.843" level=warning msg="query header: header at 48 not found" module=syncer
+time="14:48:18.845" level=info msg="Handle interchain tx wrapper" count=0 height=48 index=0 module=syncer
+time="14:48:35.528" level=warning msg="query header: header at 49 not found" module=syncer
+time="14:48:35.528" level=info msg="Persist block header" height=49 module=bxh_lite
+time="14:48:37.529" level=info msg="Handle interchain tx wrapper" count=1 height=49 index=0 module=syncer
+time="14:48:37.529" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-17 index=17 module=executor status=true type=RECEIPT_SUCCESS
+time="14:48:48.744" level=info msg="Execute callback" fields.msg= index=17 module=executor status=true type=RECEIPT_SUCCESS
+time="14:48:48.744" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-17 module=exchanger type=RECEIPT_SUCCESS
+time="14:50:01.888" level=warning msg="query header: header at 50 not found" module=syncer
+time="14:50:01.888" level=info msg="Persist block header" height=50 module=bxh_lite
+time="14:50:03.888" level=info msg="Handle interchain tx wrapper" count=0 height=50 index=0 module=syncer
+time="14:51:47.648" level=info msg="Persist block header" height=51 module=bxh_lite
+time="14:51:47.648" level=warning msg="query header: header at 51 not found" module=syncer
+time="14:51:49.648" level=info msg="Handle interchain tx wrapper" count=1 height=51 index=0 module=syncer
+time="14:51:49.649" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-18 index=18 module=executor status=true type=RECEIPT_SUCCESS
+time="14:52:47.619" level=info msg="Execute callback" fields.msg= index=18 module=executor status=true type=RECEIPT_SUCCESS
+time="14:52:47.619" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-18 module=exchanger type=RECEIPT_SUCCESS
+time="15:23:38.481" level=info msg="Persist block header" height=52 module=bxh_lite
+time="15:23:38.481" level=warning msg="query header: header at 52 not found" module=syncer
+time="15:23:40.482" level=info msg="Handle interchain tx wrapper" count=0 height=52 index=0 module=syncer
+time="15:23:52.472" level=warning msg="query header: header at 53 not found" module=syncer
+time="15:23:52.472" level=info msg="Persist block header" height=53 module=bxh_lite
+time="15:23:54.473" level=info msg="Handle interchain tx wrapper" count=1 height=53 index=0 module=syncer
+time="15:23:54.473" level=info msg="Apply tx" from=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21 id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-19 index=19 module=executor status=true type=RECEIPT_SUCCESS
+time="15:24:10.820" level=info msg="Execute callback" fields.msg= index=19 module=executor status=true type=RECEIPT_SUCCESS
+time="15:24:10.820" level=info msg="Handle ibtp receipt success" id=0xf4263c06F0a0dD96cdDc405284e7ABB9E17AAc21-0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5-19 module=exchanger type=RECEIPT_SUCCESS

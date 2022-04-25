@@ -11,7 +11,9 @@ const infuraUrl = 'wss://rinkeby.infura.io/ws/v3/43b36e4162f04775b91869b9fed5e5c
 
 async function init2(){
     var web3 = new Web3(new Web3.providers.WebsocketProvider('wss://rinkeby.infura.io/ws/v3/43b36e4162f04775b91869b9fed5e5c8'));
-    const brokerContract = new web3.eth.Contract(MyContract.abi, "0x2F4bbC4b116C8389165efA2235750Bc62ac33697");
+    const brokerContract = new web3.eth.Contract(MyContract.abi, "0x74b7bC65bC2A65C564d2CB999917b6B0722F4B16");
+
+    const dataSwapperContract = new web3.eth.Contract(MyContract.abi, "0x8FcDa6B15a45402D7b9650A420925CbEcB258dF8");
 
     brokerContract.events.Logger()
     .on('data', function(event){
@@ -23,7 +25,14 @@ async function init2(){
     //console.log(`new event - location: ${web3.utils.hexToUtf8(event.returnValues.location)}`);
     }).on('error', function(error, receipt) { // If the transaction was rejected by the network with a receipt, the second parameter will be the receipt.
     console.log(`error`);
-});
+    });
+
+    dataSwapperContract.events.Logger()
+    .on('data', function(event){
+    console.log(`new event - sender: ${event.returnValues.message}`);
+    }).on('error', function(error, receipt) { // If the transaction was rejected by the network with a receipt, the second parameter will be the receipt.
+    console.log(`error`);
+    });
 }
 
 init2();
