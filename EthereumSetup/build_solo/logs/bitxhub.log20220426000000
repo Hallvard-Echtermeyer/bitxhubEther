@@ -1,0 +1,62 @@
+time="2022-04-26T23:19:53.927" level=info msg="Initialize genesis" module=app
+time="2022-04-26T23:19:53.940" level=info msg="MemPool batch size = 200" module=order
+time="2022-04-26T23:19:53.940" level=info msg="MemPool tx slice size = 200" module=order
+time="2022-04-26T23:19:53.940" level=info msg="MemPool batch seqNo = 1" module=order
+time="2022-04-26T23:19:53.940" level=info msg="MemPool pool size = 50000" module=order
+time="2022-04-26T23:19:53.940" level=info msg="SOLO lastExec = 1" module=order
+time="2022-04-26T23:19:53.940" level=info msg="SOLO batch timeout = 300ms" module=order
+time="2022-04-26T23:19:53.940" level=info msg="GRPC service started" module=api port=60011
+time="2022-04-26T23:19:53.940" level=info msg="Ulimit raised" module=app ulimit=2048
+time="2022-04-26T23:19:53.940" level=info msg="BlockExecutor started" hash=0xbCfA2D876D5e5A55fd94f572e67909655209c8974D51D854C813F0C2B43ab97c height=1 module=executor
+time="2022-04-26T23:19:53.940" level=info msg="BlockExecutor started" hash=0xbCfA2D876D5e5A55fd94f572e67909655209c8974D51D854C813F0C2B43ab97c height=1 module=executor
+time="2022-04-26T23:19:53.940" level=info msg="Router module started" module=router
+time="2022-04-26T23:19:54.041" level=info msg="Order is ready" module=app plugin_path=plugins/solo.so
+time="2022-04-26T23:19:55.725" level=info msg="Add pier" id=0x682F775229817A9f6cE82aaBD779C7208A909E96 is_union=false module=router
+time="2022-04-26T23:19:55.726" level=info msg="Add pier" id=0x35C17f96A34AD1Bfa647BdCeA2e4bD02eec74B71 is_union=false module=router
+time="2022-04-26T23:22:48.962" level=info msg="======== Call execute, height=2" module=order
+time="2022-04-26T23:22:48.962" level=info msg="Generated block" count=1 height=2 module=app
+time="2022-04-26T23:22:48.962" level=info msg="Appchain is registering" id=0xF579083668A8Fb0c0d3D61c1367a52B7E4B4d9A1 module=executor
+time="2022-04-26T23:22:48.963" level=info msg="Persisted block" count=1 elapse="162.459µs" hash=0xC9BCa5AFc021DBEe3a7e7BA68520320bbD054c8f9C99c9892e146840B101F945 height=2 module=executor
+time="2022-04-26T23:22:49.263" level=info msg="======== Call execute, height=3" module=order
+time="2022-04-26T23:22:49.263" level=info msg="Generated block" count=1 height=3 module=app
+time="2022-04-26T23:22:49.263" level=info msg="Persisted block" count=1 elapse="176.559µs" hash=0xBfe4fAC066D793090D85f3Ce4260d9D711ad8768e121F799E9dF23FeC7808cd6 height=3 module=executor
+time="2022-04-26T23:22:50.565" level=info msg="======== Call execute, height=4" module=order
+time="2022-04-26T23:22:50.565" level=info msg="Generated block" count=1 height=4 module=app
+time="2022-04-26T23:22:50.565" level=info msg="Persisted block" count=1 elapse="136.872µs" hash=0x82Ec2E3BEF583520fB02dC3a8e0fCce181D0a6cD64a3B5A83C56d64658524412 height=4 module=executor
+time="2022-04-26T23:23:42.964" level=info msg="======== Call execute, height=5" module=order
+time="2022-04-26T23:23:42.964" level=info msg="Generated block" count=1 height=5 module=app
+time="2022-04-26T23:23:42.965" level=info msg="Persisted block" count=1 elapse="509.168µs" hash=0x03b932C913aD311267e886B8Ce0E2252aa87158d14489e4f697E063419c108ac height=5 module=executor
+time="2022-04-26T23:23:43.265" level=info msg="======== Call execute, height=6" module=order
+time="2022-04-26T23:23:43.265" level=info msg="Generated block" count=1 height=6 module=app
+time="2022-04-26T23:23:43.266" level=info msg="Persisted block" count=1 elapse="715.832µs" hash=0xCA90C53192537A6dE6d70fc7F3a5E5240cF8aB8dBECBEb4dC61Ba3d29FE6B053 height=6 module=executor
+time="2022-04-26T23:24:02.723" level=info msg="Add pier" id=0xF579083668A8Fb0c0d3D61c1367a52B7E4B4d9A1 is_union=false module=router
+time="2022-04-26T23:27:04.507" level=info msg="======== Call execute, height=7" module=order
+time="2022-04-26T23:27:04.507" level=info msg="Generated block" count=1 height=7 module=app
+time="2022-04-26T23:27:04.507" level=info msg="Appchain is registering" id=0x0C0F90aE6E4ecd6EeB9614C0d4772944c0B31a28 module=executor
+time="2022-04-26T23:27:04.507" level=info msg="Persisted block" count=1 elapse="150.961µs" hash=0x971B0e16ecDa87F587f64DA76583855b9AF47FCf3E43Afc89c12e9172b0B26d1 height=7 module=executor
+time="2022-04-26T23:27:04.807" level=info msg="======== Call execute, height=8" module=order
+time="2022-04-26T23:27:04.807" level=info msg="Generated block" count=1 height=8 module=app
+time="2022-04-26T23:27:04.808" level=info msg="Persisted block" count=1 elapse="165.275µs" hash=0xAB5C4A84Ff057503Bb3d6644f2040226ec0F7C0a4f076180e7a92FAEF8838EE9 height=8 module=executor
+time="2022-04-26T23:27:06.119" level=info msg="======== Call execute, height=9" module=order
+time="2022-04-26T23:27:06.119" level=info msg="Generated block" count=1 height=9 module=app
+time="2022-04-26T23:27:06.119" level=info msg="Persisted block" count=1 elapse="169.817µs" hash=0xd9A13c2063499e50985dAD2Ed9c07056386E45838fa5A51169B86eC45eDf531e height=9 module=executor
+time="2022-04-26T23:27:08.663" level=info msg="======== Call execute, height=10" module=order
+time="2022-04-26T23:27:08.664" level=info msg="Generated block" count=1 height=10 module=app
+time="2022-04-26T23:27:08.664" level=info msg="Persisted block" count=1 elapse="175.849µs" hash=0x84175235854A89414A7f888361C321bBe6a7A18c4B69F6650E1E6c60a35bB97A height=10 module=executor
+time="2022-04-26T23:27:08.664" level=info msg="Report checkpoint" hash=0x84175235854A89414A7f888361C321bBe6a7A18c4B69F6650E1E6c60a35bB97A height=10 module=order
+time="2022-04-26T23:27:08.964" level=info msg="======== Call execute, height=11" module=order
+time="2022-04-26T23:27:08.964" level=info msg="Generated block" count=1 height=11 module=app
+time="2022-04-26T23:27:08.966" level=info msg="Persisted block" count=1 elapse="628.322µs" hash=0x92ccA1BF2d3619000cD709da5082FCa98DE23f50Aaa1a6668F921D5F48a7E635 height=11 module=executor
+time="2022-04-26T23:27:29.705" level=info msg="Add pier" id=0x0C0F90aE6E4ecd6EeB9614C0d4772944c0B31a28 is_union=false module=router
+time="2022-04-26T23:32:30.287" level=info msg="======== Call execute, height=12" module=order
+time="2022-04-26T23:32:30.287" level=info msg="Generated block" count=1 height=12 module=app
+time="2022-04-26T23:32:30.298" level=info msg="Persisted block" count=1 elapse="177.597µs" hash=0x0cF7b614c8E1a84d4017fe6601E137ca76A896a08bbBee7dc5e5449F8c30b824 height=12 module=executor
+time="2022-04-26T23:32:44.154" level=info msg="======== Call execute, height=13" module=order
+time="2022-04-26T23:32:44.154" level=info msg="Generated block" count=1 height=13 module=app
+time="2022-04-26T23:32:44.155" level=info msg="Persisted block" count=1 elapse="161.547µs" hash=0x82100096ad71cacCA28ea49e1922d231f1039Ad5F1Cc7Ae1c3C9fCd809ad3D9D height=13 module=executor
+time="2022-04-26T23:36:45.376" level=info msg="======== Call execute, height=14" module=order
+time="2022-04-26T23:36:45.377" level=info msg="Generated block" count=1 height=14 module=app
+time="2022-04-26T23:36:45.421" level=info msg="Persisted block" count=1 elapse="300.263µs" hash=0xfED51a2C8D7458AD2FB4ec7A2BE74C576DbC938b01536748E4f81ef091d2EeFd height=14 module=executor
+time="2022-04-26T23:37:04.147" level=info msg="======== Call execute, height=15" module=order
+time="2022-04-26T23:37:04.147" level=info msg="Generated block" count=1 height=15 module=app
+time="2022-04-26T23:37:04.172" level=info msg="Persisted block" count=1 elapse="177.971µs" hash=0x4A6Fb71cE803e6cdDB9bEa9F0cB3BCFA1b572892cA3f5908A1B1f8d3bF3b7CdB height=15 module=executor

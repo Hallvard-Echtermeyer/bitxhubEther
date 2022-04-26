@@ -33,24 +33,30 @@ contract Broker {
 
     //Self implemented event for seeing what functions get called
     event Logger(string message);
+
+    event Timer(
+        string where,
+        uint256 time
+    );
+
     uint256 public count;
 
     //Simple functions to check that we get contact with the script
     function increment() external {
-        emit Logger("the increment() function was called");
+        emit Logger("the increment() function was called 02");
         count += 1;
     }
 
     // Authority control. Contracts need to be registered.
     modifier onlyWhiteList() {
-        emit Logger("something happened WhiteList");
+        emit Logger("something happened WhiteList 02");
         require(whiteList[msg.sender] == 1, "Invoker are not in white list");
         _;
     }
 
     // Authority control. Only the administrator can audit the contract
     modifier onlyAdmin() {
-        emit Logger("something happened only Admin");
+        emit Logger("something happened only Admin 02");
         bool flag = false;
         for (uint256 i = 0; i < admins.length; i++) {
             if (msg.sender == admins[i]) {
@@ -64,7 +70,7 @@ contract Broker {
     }
 
     function initialize() public {
-        emit Logger("something happened initialize");
+        emit Logger("something happened initialize 02");
         for (uint256 i = 0; i < inChains.length; i++) {
             inCounter[inChains[i]] = 0;
         }
@@ -84,12 +90,12 @@ contract Broker {
 
     // 0: auditting  1: approved  -1: refused
     function register(address addr) public {
-        emit Logger("something happened register");
+        emit Logger("something happened register 02 ");
         whiteList[addr] = 1; //set register value to 1, so i can register data_swapper and transfer
     }
 
     function audit(address addr, int64 status) public returns (bool) {
-        emit Logger("something happened audit ");
+        emit Logger("something happened audit 02");
         if (status != -1 && status != 0 && status != 1) {
             return false;
         }
@@ -108,7 +114,7 @@ contract Broker {
         bool req,
         bytes calldata bizCallData
     ) external payable {
-        emit Logger("something happened invokeInterChain");
+        emit Timer("invokeInterchain02", block.timestamp);
         require(whiteList[destAddr] == 1);
         invokeIndexUpdate(srcChainID, index, req, "");
 
@@ -156,7 +162,8 @@ contract Broker {
         bool req,
         string memory err
     ) private {
-        emit Logger("something happened invokeIndexUpdate");
+        emit Timer("invokeIndexUpdate02", block.timestamp);
+
         if (req) {
             require(inCounter[srcChainID] + 1 == index);
             markInCounter(srcChainID);
@@ -185,7 +192,7 @@ contract Broker {
         bool req,
         string memory err
     ) public {
-        emit Logger("something happened invokeIndexUpdateWithError");
+        emit Logger("something happened invokeIndexUpdateWithError 02");
         invokeIndexUpdate(srcChainID, index, req, err);
     }
 
@@ -197,7 +204,7 @@ contract Broker {
         string memory argscb,
         string memory argsrb
     ) public onlyWhiteList {
-        emit Logger("something happened emitInterchainEvent");
+        emit Logger("something happened emitInterchainEvent 02");
         // Record the order of interchain contract which has been started.
         outCounter[destChainID]++;
         if (outCounter[destChainID] == 1) {
@@ -220,7 +227,7 @@ contract Broker {
 
     // The helper functions that help document Meta information.
     function markCallbackCounter(address from, uint64 index) private {
-        emit Logger("something happened markCallbackCounter");
+        emit Logger("something happened markCallbackCounter 02");
         if (callbackCounter[from] == 0) {
             callbackChains.push(from);
         }
@@ -229,7 +236,7 @@ contract Broker {
     }
 
     function markInCounter(address from) private {
-        emit Logger("something happened markInCounter");
+        emit Timer("markInCounter02", block.timestamp);
         inCounter[from]++;
         if (inCounter[from] == 1) {
             inChains.push(from);

@@ -1,1 +1,2 @@
-read validators file: open pier/ether/config/ether.validators: not a directory
+time="23:27:04.102" level=info msg="Establish connection with bitxhub localhost:60011 successfully" module=rpcx
+the register request was submitted successfully, chain id is 0x0C0F90aE6E4ecd6EeB9614C0d4772944c0B31a28, proposal id is 0x0C0F90aE6E4ecd6EeB9614C0d4772944c0B31a28-0

@@ -52,3 +52,4 @@ cd ../Bitxhub
 source InitPier.sh $1
 
 
+./pier --repo=pier02 appchain register --name=ethereum --type=ether --consensusType POS --validators=pier02/ether/config/ether.validators --desc="ethereum appchain for test" --version=1.0.0

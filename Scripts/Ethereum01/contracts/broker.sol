@@ -33,6 +33,9 @@ contract Broker {
 
     //Self implemented event for seeing what functions get called
     event Logger(string message);
+
+    event Timer(string where, uint256 time);
+
     uint256 public count;
 
     //Simple functions to check that we get contact with the script
@@ -156,7 +159,7 @@ contract Broker {
         bool req,
         string memory err
     ) private {
-        emit Logger("something happened invokeIndexUpdate");
+        emit Timer("invokeIndexUpdate", block.timestamp);
         if (req) {
             require(inCounter[srcChainID] + 1 == index);
             markInCounter(srcChainID);
@@ -197,7 +200,7 @@ contract Broker {
         string memory argscb,
         string memory argsrb
     ) public onlyWhiteList {
-        emit Logger("something happened emitInterchainEvent");
+        emit Timer("emitInterchainEvent", block.timestamp);
         // Record the order of interchain contract which has been started.
         outCounter[destChainID]++;
         if (outCounter[destChainID] == 1) {
@@ -220,7 +223,8 @@ contract Broker {
 
     // The helper functions that help document Meta information.
     function markCallbackCounter(address from, uint64 index) private {
-        emit Logger("something happened markCallbackCounter");
+        emit Timer("markCallbackCounter", block.timestamp);
+
         if (callbackCounter[from] == 0) {
             callbackChains.push(from);
         }

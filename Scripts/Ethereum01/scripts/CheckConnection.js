@@ -20,12 +20,12 @@ const infuraUrl02 = 'https://rinkeby.infura.io/v3/731722c66a504aa6bcc25135f3dfc3
 const init = async () =>{
 
     //----------------------------- All the contract addresses, needs to be gotten from SetupInfo.txt-----------------------------
-    let TransferAddress = '0x12B0A3550bfcfD3fEd54b11E91d1271f89fca628'
-    let SwapperAddress = '0x8FcDa6B15a45402D7b9650A420925CbEcB258dF8'
+    let TransferAddress = '0xEbf86066f32f9d186c37eb4f1615ea47bae62564'
+    let SwapperAddress = '0x35B11a84Fcf60f290ccF21Da2aCbF1f360EdEa67'
     
-    let SecondTransferAddress = '0x21d1939340C396f95b91f4Ae37271d402592EabA'
-    let SecondSwapperAddress = '0x42dE462cFb9557D82C2d3A7E82c858DA3E941716'
-    let SecondChainID = '0x2159e8Eb8591eC4cdbbe041999D3C22053f2Ede5'
+    let SecondTransferAddress = '0xaBA83D962fC4c6324d56530d0A6532521db7f7e7'
+    let SecondSwapperAddress = '0xd5EC0CCd902fb984Cd4481274D80DabccEFBE16c'
+    let SecondChainID = '0x0C0F90aE6E4ecd6EeB9614C0d4772944c0B31a28'
     //-----------------------------------------------------------------------------------------------------------------
     
     //--------------------------------------------- Init contracts of Ethereum01
@@ -62,11 +62,27 @@ const init = async () =>{
     //---------------------------------------------------------------------------------
 
     //Set the data for K V pair on both 01 and 02
-    // const receipt01 = await dataSwapper01.methods.set("key7", "value07").send({ from: address });
+    // const receipt01 = await dataSwapper01.methods.set("key", "value01").send({ from: address });
     // console.log(await dataSwapper01.methods.getData("key").call());
 
-    // const receipt02 = await dataSwapper02.methods.set("key8", "value08").send({ from: address });
-    // console.log(await dataSwapper02.methods.getData("key2").call());
+    // const receipt02 = await dataSwapper02.methods.set("key3", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \
+    // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \
+    // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \
+    // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \
+    // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \
+    // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \
+    // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \
+    // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \
+    // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA \
+    // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").send({ from: address });
+    // const receipt03 = await dataSwapper02.methods.set("key3", "value03").send({ from: address });
+    // // const receipt04 = await dataSwapper02.methods.set("key4", "value04").send({ from: address });
+    // // const receipt05 = await dataSwapper02.methods.set("key5", "value05").send({ from: address });
+    // // const receipt06 = await dataSwapper02.methods.set("key6", "value06").send({ from: address });
+    // // const receipt07 = await dataSwapper02.methods.set("key7", "value07").send({ from: address });
+    // // const receipt08 = await dataSwapper02.methods.set("key8", "value08").send({ from: address });
+    // // const receipt09 = await dataSwapper02.methods.set("key9", "value09").send({ from: address });
+    //console.log(await dataSwapper02.methods.getData("key3").call());
 
 
     // await broker01.methods.register(SwapperAddress).send({ from: address });
@@ -81,7 +97,14 @@ const init = async () =>{
 
 
 
-    const second = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key13").send({from: address});
+    // const second = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key2").send({from: address});
+    const second2 = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key3").send({from: address});
+    // const second3 = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key4").send({from: address});
+    // const second4 = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key5").send({from: address});
+    // const second5 = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key6").send({from: address});
+    // const second6 = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key7").send({from: address});
+    // const second7 = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key8").send({from: address});
+    // const second8 = await dataSwapper01.methods.get(SecondChainID, SecondSwapperAddress, "key9").send({from: address});
 
     // console.log(await dataSwapper01.methods.getData("key").call());
     // console.log(await dataSwapper01.methods.getData("key2").call());
